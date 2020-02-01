@@ -18,8 +18,8 @@ echo " DONE"
 # default mode is to overrite the file
 # logging not required because script already does it
 TARGET_FILE=/wow.zip
-~/bin/dropbox_uploader.sh delete $TARGET_FILE
-~/bin/dropbox_uploader.sh upload $FILE $TARGET_FILE
+~/bin/dropbox_uploader delete $TARGET_FILE
+~/bin/dropbox_uploader upload $FILE $TARGET_FILE
 
 # clean up file
 echo -n " > Cleanup ..."
