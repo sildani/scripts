@@ -10,7 +10,7 @@ echo " DONE"
 
 # create the zip file
 echo -n " > Creating archive..."
-cd Games/battlenet/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_
+cd ~/Games/battlenet/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_
 zip -rq $FILE Interface WTF
 echo " DONE"
 
