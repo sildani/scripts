@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # remove previous archive if exists
-echo -n " > Removing archive file if exists..."
 FILE=/tmp/wow.zip
 if [ -f "$FILE" ]; then
+  echo -n " > Removing previous archive file..."
   rm $FILE
+  echo " DONE"
 fi
-echo " DONE"
 
 # create the zip file
 echo -n " > Creating archive..."
