@@ -36,21 +36,21 @@ for ali_addon_zip_file in ${ali_addon_zip_files[*]}; do
     ali_addons_dirs_listing=`ls`
     ali_addon_dirs=( $ali_addons_dirs_listing )
 
-    # for ali_addon_dir in ${ali_addon_dirs[*]}; do
+    for ali_addon_dir in ${ali_addon_dirs[*]}; do
 
-    #     echo "\$ali_addon_dir:"
-    #     echo $ali_addon_dir
-    #     echo ""
+        echo "\$ali_addon_dir:"
+        echo $ali_addon_dir
+        echo ""
 
-    #     # backup addon currently installed
-    #     mv -v "$ali_wow_addons_dir/$ali_addon_dir" ../addons-old/
-    #     echo ""
+        # backup addon currently installed
+        mv -v "$ali_wow_addons_dir/$ali_addon_dir" ../addons-old/
+        echo ""
 
-    #     # install new one
-    #     mv -v ./$ali_addon_dir "$ali_wow_addons_dir/"
-    #     echo ""
+        # install new one
+        mv -v ./$ali_addon_dir "$ali_wow_addons_dir/"
+        echo ""
 
-    # done
+    done
 
     mv -v ../$ali_addon_zip_file ../addons-old/
     echo ""
