@@ -57,5 +57,7 @@ for ali_addon_zip_file in ${ali_addon_zip_files[*]}; do
 
 done
 
+rm -rf $ali_script_dir/*
+
 echo "DONE
 "
