@@ -9,9 +9,9 @@ rm -rf /c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/Interface
 rm -rf /c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/WTF
 echo "DONE"
 
-# download latest backed-up settings
-# script has logging built-in
-~/OneDrive/Documents/code/Dropbox-Uploader/dropbox_uploader.sh download /wow.zip /tmp/wow.zip
+# download the zip file
+# see https://github.com/andreafabrizi/Dropbox-Uploader
+dropbox_uploader download /wow.zip /tmp/wow.zip
 
 # unpack
 echo -n " > Unpacking archive and moving into location... "
@@ -26,5 +26,5 @@ cp /tmp/Config.wtf /c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/WTF/C
 
 # clean
 echo -n " > Removing /tmp/wow.zip... "
-rm ./wow.zip
+rm /tmp/wow.zip
 echo "DONE"

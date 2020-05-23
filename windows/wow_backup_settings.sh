@@ -10,9 +10,9 @@ if [ -f "$FILE" ]; then
   echo " DONE"
 fi
 
-# create the zip file using GNU zip
+# create the zip file using GNU zip (see https://github.com/bmatzelle/gow/wiki for the win32 binary of the GNU zip)
 echo -n " > Creating archive..."
-cd ~/Games/battlenet/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_
+cd /c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_
 zip -rq $FILE Interface WTF
 echo " DONE"
 
