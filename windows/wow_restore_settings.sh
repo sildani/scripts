@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# backup Windows Config.wtf
+# backup game settings
 cp /c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/WTF/Config.wtf /tmp/Config.wtf
 
 # clear out current settings
@@ -21,7 +21,7 @@ mv ./Interface /c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/
 mv ./WTF /c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/
 echo "DONE"
 
-# restore Windows Config.wtf
+# restore game settings
 cp /tmp/Config.wtf /c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/WTF/Config.wtf
 
 # clean
