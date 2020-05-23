@@ -1,17 +1,30 @@
 #!/bin/bash
 
-# Assumes Windows drive is mounted to /mnt/windows
-
-# Backup Linux Config.wtf
+# backup game settings
 cp ~/Games/battlenet/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/WTF/Config.wtf /tmp/Config.wtf
 
-# remove existing files and copy windows files
-rm -rf ~/Games/battlenet/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/Cache
-cp -R /mnt/windows/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/Cache ~/Games/battlenet/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/
+# clear out current settings
+echo -n " > Clearing out current settings... "
 rm -rf ~/Games/battlenet/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/Interface
-cp -R /mnt/windows/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/Interface ~/Games/battlenet/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/
-rm -rf ~/Games/battlenet/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/WTF 
-cp -R /mnt/windows/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/WTF ~/Games/battlenet/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/
+rm -rf ~/Games/battlenet/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/WTF
+echo "DONE"
 
-# Restore Linux Config.wtf
+# download the zip file
+# see https://github.com/andreafabrizi/Dropbox-Uploader
+dropbox_uploader download /wow.zip /tmp/wow.zip
+
+# unpack
+echo -n " > Unpacking archive and moving into location... "
+cd /tmp
+unzip -q ./wow.zip
+mv ./Interface ~/Games/battlenet/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/
+mv ./WTF ~/Games/battlenet/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/
+echo "DONE"
+
+# restore game settings
 cp /tmp/Config.wtf ~/Games/battlenet/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/WTF/Config.wtf
+
+# clean
+echo -n " > Removing /tmp/wow.zip... "
+rm /tmp/wow.zip
+echo "DONE"
