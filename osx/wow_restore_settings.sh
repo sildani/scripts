@@ -43,7 +43,7 @@ else
 fi
 
 if [ -f "$SOURCE_FILE" ]; then
-  printf " [wow_restore_settings] Restoring settings from $SOURCE_FILE... "
+  printf " [wow_restore_settings] Restoring from $SOURCE_FILE... "
   
   if [ -d $TEMP_DIR ]; then
     rm -rf $TEMP_DIR
