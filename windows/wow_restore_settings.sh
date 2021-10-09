@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Assumes google drive is available in /d/google\ drive/
+# Assumes google drive is available in /g/My\ Drive/
 
 WOW_DIR="/c/Program Files (x86)/World of Warcraft/_retail_"
 CONFIG_FILE="$WOW_DIR/WTF/Config.wtf"
-SOURCE_FILE="/d/google drive/wow.zip"
+SOURCE_FILE="/g/My\ Drive/wow.zip"
 TEMP_DIR="/tmp/addon_backup"
 
 # echo -n "WOW_DIR=" ; echo $WOW_DIR

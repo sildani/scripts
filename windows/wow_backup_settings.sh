@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Assumes google drive is available in /d/google\ drive/
+# Assumes google drive is available in /g/My\ Drive/
 
 FILENAME=wow.zip
 SOURCE_FILE=/tmp/$FILENAME
-TARGET_FILE="/d/google drive/$FILENAME"
+TARGET_FILE="/g/My\ Drive/$FILENAME"
 
 # echo -n "FILE="
 # echo $SOURCE_FILE
